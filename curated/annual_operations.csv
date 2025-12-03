@@ -1,0 +1,10 @@
+﻿year,train_class_kor,runs,train_km,train_class
+2016,소화물,0,0,Parcel
+2016,컨테이너,84,27103,Container
+2016,화물,191,45725,Bulk
+2017,소화물,0,0,Parcel
+2017,컨테이너,66,22289,Container
+2017,화물,157,36575,Bulk
+2018,소화물,0,0,Parcel
+2018,컨테이너,66,22224,Container
+2018,화물,133,34905,Bulk
