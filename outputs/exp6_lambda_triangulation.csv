@@ -1,0 +1,5 @@
+﻿Corridor,λ_EMP1 (scaled),λ_EMP2 (scaled),λ_IPI,λ_expert,λ_triangulated,90%CI lower,90%CI upper,CI width,|λ_tri - λ_expert|,Expert in CI?
+Gyeongbu,0.872,1.0,0.489,0.65,0.805,0.74,0.87,0.129,0.155,NO ✗
+Chungbuk,0.513,1.0,0.387,0.45,0.732,0.672,0.791,0.119,0.282,NO ✗
+Yeongdong,0.0,0.0,0.241,0.25,0.072,0.023,0.121,0.098,0.178,NO ✗
+Jungang,0.075,0.205,0.262,0.3,0.179,0.129,0.228,0.099,0.121,NO ✗

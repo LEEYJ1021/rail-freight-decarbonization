@@ -1,0 +1,6 @@
+﻿Rank,Parameter,Uncertainty Type,Low Setting,High Setting,Total @ Low (B KRW),Total @ High (B KRW),Swing (B KRW),% of Base,Reviewer Ref
+1,K-ETS Carbon Price (KRW/tCO₂e),scenario_range,"8,684 KRW","36,509 KRW",0.9375,2.0619,1.1245,76.52,K-ETS empirical range 2018–2024 (R2-5)
+2,Modal Shift Rate,scenario_range,8%,16%,0.9797,1.9593,0.9797,66.67,Key driver of total savings (R2-3)
+3,VSC_PM₁₀ (KRW/kg),scenario_range,"6,000 KRW/kg","11,000 KRW/kg",1.297,1.642,0.345,23.48,Korea EPA value range
+4,PM₁₀ EF Δ (g/tkm) [R2-3 focus],measurement_uncertainty,0.0669 g/tkm,0.0791 g/tkm,1.4205,1.5185,0.098,6.67,R2-3: 16.7% measurement bias propagation
+5,Rail EF_electric (gCO₂e/tkm),scenario_range,15.951 g/tkm,17.876 g/tkm,1.5376,1.4979,0.0398,2.71,Grid mix 2010–2024 (Exp 3)

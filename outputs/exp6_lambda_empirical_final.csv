@@ -1,0 +1,5 @@
+﻿Corridor,EMP-1 λ_net (IVW),EMP-2 λ_net (reg.),EMP-3 λ_IPI,λ_triangulated,90%CI,λ_expert,Expert in CI?,OOS decline rank match,"VSS @ λ_tri (B KRW, S2)","VSS @ λ_expert (B KRW, S2)","ΔVSS (tri vs expert, %)"
+Gyeongbu,0.365,1.0,0.489,0.805,"[0.740, 0.870]",0.65,NO ✗,YES ✓,0.912,0.9122,-0.02
+Chungbuk,0.365,1.0,0.387,0.732,"[0.672, 0.791]",0.45,NO ✗,PARTIAL,0.4929,0.4915,0.28
+Yeongdong,0.365,1.0,0.241,0.072,"[0.023, 0.121]",0.25,NO ✗,YES ✓,0.4519,0.4534,-0.33
+Jungang,0.365,1.0,0.262,0.179,"[0.129, 0.228]",0.3,NO ✗,PARTIAL,0.3773,0.3755,0.48

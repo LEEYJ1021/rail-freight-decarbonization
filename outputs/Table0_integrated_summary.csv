@@ -1,0 +1,7 @@
+﻿Experiment,Key Question,Key Finding,Reviewer,Action
+Exp 1 — Bayesian Prior  [P-EXP1],Does prior choice affect VSS?,"Max|ΔCI|=4.8%, Max|ΔVSS|=5.0% → ROBUST; σ_L=56.7 M tkm/yr from KORAIL std-dev",R1-6,Prior sensitivity table + σ_L data source stated in ms
+Exp 2 — PM₁₀ Tornado  [P-EXP2],Does PM₁₀ bias affect social savings?,PM₁₀ EF swing=0.0980 B KRW (6.67%) — Rank 4/5; footnote added: meas. uncertainty ≠ scenario range,R2-3,Corrected 'last' → Rank 4/5; type footnote added
+Exp 3 — Grid EF  [P-EXP3],Dynamic grid carbon intensity recalibration,"EF 2010→2024: 17.88→15.95 (−10.8%); 2019 spike (coal↑, nuclear curtailed) annotated","R1-4, R2-3",2019 spike policy context added (1 sentence in ms)
+Exp 4 — Peak Shift  [P-EXP4],Quantitative CO₂e & block-time effect of peak diversion,"20% shift: −20.7% CO₂e, 346 hr/yr (Gyeongbu); passenger-conflict ceiling ~15–20% noted",R2-6,Ceiling annotated on Fig 4(b); Discussion caveat added
+Exp 5 — λ Validation  [P-EXP5],Corridor-specific modal competition parameter support,VSS/E[RP] 6.41–10.77%; σ_D=8% λ-independent (KORAIL volatility estimate),R2-1,λ–σ_D independence defense added to Section 3.2 note
+Supp — KORAIL + K-ETS,Data recency & model validity,"MAPE=4.9%, COVID structural break confirmed; 2018 = last structurally stable year","R1-4, R2-7",AR(1)+COVID OOS validation + K-ETS time series
