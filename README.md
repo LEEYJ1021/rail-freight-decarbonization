@@ -172,28 +172,28 @@ from integrated_pipeline import (
 
 ### Figure 4: Hierarchical Bayesian Performance
 - Bayesian models outperform classical ML in sparse-data commodities
-- Reduces prediction error variance by 38% for low-sample commodities
+- Reduces posterior credible interval width by 60–85% for low-sample commodities
 - Enables reconstruction of complete ton-km panel from partial data
 
 ### Figure 7: Risk-Return Analysis
-- Gyeongbu Line: Highest revenue (2.8M KRW/train) with moderate risk (CV=0.42)
-- Jungang Line: Second-highest revenue (2.1M KRW/train) with higher risk (CV=0.58)
-- Daegu Line: Optimal balance (1.9M KRW/train, CV=0.39)
+- Daegu Line: Highest revenue with optimal risk balance (CV=0.39)
+- Gyeongbu Line: Second-highest revenue with moderate risk (CV=0.42)
+- Jungang Line: Higher risk profile relative to revenue (CV=0.58)
 
 ### Figure 8: Regression Insights
-- Base model R²: 0.642 vs Extended model R²: 0.798
-- Overnight penalty: 33.7 minutes (20% explained by operational confounders)
-- Key drivers: Distance (β=0.82), congestion (β=0.15), tonnage×gradient (β=0.11)
+- Base model R²: 0.571 vs Extended model R²: 0.742
+- Overnight penalty: 54.2 minutes (20% explained by operational confounders)
+- Key drivers: Distance (β=0.921), congestion (β=0.15), tonnage×gradient (β=0.11)
 
 ### Figure 9: Stochastic Optimization Value
-- Value of Stochastic Solution (VSS): 0.35 B KRW/year
+- Value of Stochastic Solution (VSS): 0.35 billion KRW/year (17.9% improvement over deterministic benchmark; VSS/EEV)
 - Emissions reduction vs deterministic: 6.7%
-- Service level improvement: 94.2% → 96.8%
+- Service level maintained at 94.3%
 
 ### Figure 10-11: Policy Simulations
 - Empty container rate increase from 74% → 84%: Revenue -8%, Emissions -12%
-- Optimal balance zone identified at 19-22 ktCO₂e / 8.5-9.0 B KRW
-- Carbon price sensitivity: Shifts allocation from coal (45→32 trains) to containers (8→18 trains)
+- Optimal balance zone identified at 80–85% empty rate / 8.5–9.0 billion KRW
+- Carbon price sensitivity: Shifts allocation from coal (15→18 trains) to containers (0→12 trains)
 
 ## Methodology
 
@@ -201,7 +201,7 @@ from integrated_pipeline import (
 ```python
 # Emission calculation with operational adjustments
 emissions = (gross_ton_km * γ_baseline * α_operational) / 1000
-# where α_operational ∈ [1.0, 1.15] based on service characteristics
+# where α_operational ∈ [1.0, 1.157] based on service characteristics
 ```
 
 ### 2. Hierarchical Bayesian Model
@@ -256,7 +256,7 @@ Tests whether prior distribution choice materially affects the Value of the Stoc
 
 One-at-a-time sensitivity analysis (tornado diagram) ranking five uncertainty sources by their swing on total social savings: K-ETS carbon price, modal shift rate, VSC_PM₁₀ valuation, PM₁₀ emission factor measurement bias (±8.35%), and rail emission factor. Uncertainty type (scenario range vs. empirical measurement uncertainty) is annotated for each parameter to clarify their conceptually distinct roles.
 
-**Key result:** PM₁₀ EF measurement bias ranks 4th of 5 (swing = 0.098 B KRW, 6.67% of base case). It affects only post-hoc social valuation and does not enter the stochastic optimization objective. K-ETS price and modal shift rate are the dominant policy levers.
+**Key result:** PM₁₀ EF measurement bias ranks 4th of 5 (swing = 0.098 billion KRW, 6.67% of base case). It affects only post-hoc social valuation and does not enter the stochastic optimization objective. K-ETS price and modal shift rate are the dominant policy levers.
 
 **Outputs:** `exp2_pm10_tornado_table.csv`, `exp2_tornado_diagram.pdf`
 
@@ -272,7 +272,7 @@ Annual Korean electricity grid carbon intensity is reconstructed for 2010–2024
 
 Quantitative simulation of CO₂e and block-time effects from shifting freight trains from peak to off-peak hours across four corridors (Gyeongbu, Chungbuk, Yeongdong, Jungang). Each corridor has an empirically derived passenger-conflict ceiling beyond which slot reallocation becomes infeasible without dedicated freight infrastructure. A cold-start CO₂ penalty (λ_start = 0.12, KEPCO operational survey) is modeled explicitly and shown to be dominated by peak congestion relief across all shift levels and corridors.
 
-**Key result:** At 20% shift, Gyeongbu achieves 1,511 tCO₂e/yr reduction and 33.0 M KRW/yr in monetized K-ETS savings. Combined reduction across Chungbuk, Yeongdong, and Jungang (all below their passenger ceilings of 25–30%) is 3,769 tCO₂e/yr and 82.3 M KRW/yr. All 32 non-zero scenarios show net CO₂e reduction; direction is robust across cold-start sensitivity λ_start ∈ [0.05, 0.35].
+**Key result:** At 20% shift, Gyeongbu achieves 1,511 tCO₂e/yr reduction and 33.0 million KRW/yr in monetized K-ETS savings. Combined reduction across Chungbuk, Yeongdong, and Jungang (all below their passenger ceilings of 25–30%) is 3,769 tCO₂e/yr and 82.3 million KRW/yr. All 32 non-zero scenarios show net CO₂e reduction; direction is robust across cold-start sensitivity λ_start ∈ [0.05, 0.35].
 
 **Outputs:** `exp4_peak_shift_table.csv`, `exp4_peak_shift_tradeoff.pdf`, `exp4_coldstart_sensitivity.pdf`
 
@@ -343,7 +343,7 @@ Reconstructs the full K-ETS allowance price history (2015–2024) with phase ann
 | Grid EF 2021 structural inflection (Exp 3) | −15.8% vs 2018 |
 | 2024 grid EF vs 2018 baseline (Exp 3) | −17.1% (15.95 vs 19.25 gCO₂e/GTK) |
 | CO₂e reduction at 20% peak shift, 3 corridors (Exp 4) | 3,769 tCO₂e/yr |
-| Monetized savings at 20% peak shift, 3 corridors (Exp 4) | 82.3 M KRW/yr |
+| Monetized savings at 20% peak shift, 3 corridors (Exp 4) | 82.3 million KRW/yr |
 | VSS positive across λ ∈ [0.05, 0.95] (Exp 5) | 100% of corridor-scenario pairs |
 | VSS/E[RP] range across corridors and scenarios (Exp 5) | 6.41–10.77% |
 | Network λ from tariff natural experiment, EMP-1 (Exp 6) | 0.365 [90% CI: 0.241, 0.489] |
